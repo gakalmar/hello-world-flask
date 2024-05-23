@@ -1,0 +1,17 @@
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+metadata:
+  name: hw-cluster
+  region: eu-west-2
+  version: "1.29"
+
+nodeGroups:
+  - name: ng-1
+    instanceType: t3.medium
+    minSize: 0 # To be able to downscale completely
+    maxSize: 6 
+    desiredCapacity: 2
+    privateNetworking: false # make this true of you only use private ones
+    ssh:
+      publicKeyName: my-keypair
