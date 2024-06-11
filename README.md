@@ -7,7 +7,12 @@
         - The app will run on port `:5000`
         - Type this in the browser to see the result: `localhost:5000`
     
-    - To deploy it in Kubernetes:
+    - Deploy using Docker:
+        - Build using the `Dockerfile`:
+            - `docker build -t 1.0 .`
+            - `docker run -p 5000:5000 <appName>`
+    
+    - Deploy it in Kubernetes:
         - Create your cluster:
             - `eksctl create cluster -f ./k8s/cluster-hw.yaml`
         - Change environment to this cluster (if you were using Minikube previously):
