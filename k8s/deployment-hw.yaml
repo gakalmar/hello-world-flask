@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: flask-app
-        image: 891376988072.dkr.ecr.eu-west-2.amazonaws.com/hello-world-flask:v1.0
+        image: 891376988072.dkr.ecr.eu-west-2.amazonaws.com/hello-world-flask:v1.0 # new updload required as this was deleted already!
         ports:
         - containerPort: 5000
